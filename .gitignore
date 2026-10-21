@@ -1,0 +1,63 @@
+# ============ 密钥与环境 ============
+.env
+.env.*
+!.env.example
+*_key*
+*_token*
+api_key*
+*secret*
+credentials*
+
+# ============ Python ============
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+
+# ============ 数据与权重（不入库） ============
+data/
+datasets/
+*.csv
+*.json
+!package.json
+!requirements.json
+weights/
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.keras
+*.gguf
+
+# ============ 运行产物 ============
+demo_output/
+processed_data/
+
+# ============ 模型与检索产物 ============
+outputs/
+checkpoints/
+runs/
+*.faiss
+*.pkl
+*.index
+*.ann
+vector_db/
+
+# ============ 工具与缓存残留 ============
+.wucai/
+.ipynb_checkpoints/
+unsloth_compiled_cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ============ IDE ============
+.vscode/
+.idea/
+*.swp
+.DS_Store

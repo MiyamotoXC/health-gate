@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile all modules (syntax check)
+        run: python -m py_compile health_schema.py health_eval.py human_review.py medical_data_processor.py demo.py
+      - name: Run end-to-end demo (zero-dependency, exercises eval + review)
+        run: python demo.py

@@ -1,0 +1,5 @@
+# 完整训练 / 真实语料处理 所需（demo / 评测 / 审核 不依赖以下任何一项）
+pandas>=1.5
+datasets>=2.14
+jieba>=0.42            # health_eval.py 在有 jieba 时用 jieba BLEU 实现；没有则自动降级字符 2gram
+# 仅训练时：torch / transformers / peft（建议用 Unsloth 加速）
